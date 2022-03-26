@@ -45,7 +45,7 @@ $GLOBALS['TCA']['tt_content']['types']['sampleextension_jumbotron'] = [
             'config' => [
                 'enableRichtext' => true,
                 'richtextConfiguration' => 'default',
-            ],
+            ]
         ],
         'buttonurl'=> [
             'config' => [
@@ -54,9 +54,42 @@ $GLOBALS['TCA']['tt_content']['types']['sampleextension_jumbotron'] = [
         ],
         'buttontext'=> [
             'config' => [
-                'renderType' => 'input',
+                'type' => 'input',
                 'max' => 30
             ]
         ],
     ],
 ];
+
+$additionalColumns = [
+    'buttonurl' => [
+        'label' => 'LLL:EXT:sampleextension/Resources/Private/Language/locallang.xlf:buttonurl',
+        'config' => [
+            'type' => 'input',
+            'renderType' => 'inputLink',
+            'default' => '',
+        ],
+    ],
+    'buttontext' => [
+        'label' => 'LLL:EXT:sampleextension/Resources/Private/Language/locallang.xlf:buttontext',
+        'config' => [
+            'type' => 'input',
+            'max' => 30,
+            'default' => '',
+        ],
+    ],
+];
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    'tt_content',
+    'buttonurl',
+    'sampleextension_jumbotron',
+    'before:bodytext'
+);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    'tt_content',
+    'buttontext',
+    'sampleextension_jumbotron',
+    'before:bodytext'
+);

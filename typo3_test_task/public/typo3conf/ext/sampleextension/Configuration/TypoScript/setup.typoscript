@@ -140,7 +140,7 @@ page {
     }
 
     includeCSSLibs {
-
+        bootstrap = https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css
     }
 
     includeCSS {
@@ -204,4 +204,13 @@ config {
 
 lib.contentElement {
     templateRootPaths.200 = EXT:sampleextension/Resources/Private/Templates/
+    partialRootPaths.200 = EXT:sampleextension/Resources/Private/Partials/
+    layoutRootPaths.200 = EXT:sampleextension/Resources/Private/Layout/
+}
+
+tt_content {
+    sampleextension_jumbotron =< lib.contentElement
+    sampleextension_jumbotron {
+        templateName = Jumbotron
+    }
 }

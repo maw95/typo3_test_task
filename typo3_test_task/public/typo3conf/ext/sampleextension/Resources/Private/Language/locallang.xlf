@@ -12,6 +12,12 @@
             <trans-unit id="sampleextension_jumbotron_description" resname="sampleextension_jumbotron_description">
                 <source>Creates bootstrap-like jumbotron element.</source>
             </trans-unit>
+            <trans-unit id="buttonurl" resname="buttonurl">
+                <source>Button URL</source>
+            </trans-unit>
+            <trans-unit id="buttontext" resname="buttontext">
+                <source>Button text</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

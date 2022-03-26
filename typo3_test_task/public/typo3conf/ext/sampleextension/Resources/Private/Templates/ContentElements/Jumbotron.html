@@ -1,0 +1,22 @@
+<div class="h-100 p-5 text-white bg-dark rounded-3">
+    <h1 class="mb-3">
+        {data.header}
+    </h1>
+    <f:if condition="{data.subheader}">
+    <h3>
+        {data.subheader}
+    </h3>
+    </f:if>
+    <f:if condition="{data.bodytext}">
+        <p>
+            {data.bodytext -> f:format.html()}
+        </p>
+    </f:if>
+    <f:if condition="{data.buttonurl} || {data.buttontext}">
+        <f:link.typolink parameter="{data.buttonurl}">
+            <button class="btn btn-outline-light" type="button">
+                {data.buttontext}
+            </button>
+        </f:link.typolink>
+    </f:if>
+</div>
