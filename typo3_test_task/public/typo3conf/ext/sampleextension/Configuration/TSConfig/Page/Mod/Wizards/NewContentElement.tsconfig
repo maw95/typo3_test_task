@@ -1,0 +1,17 @@
+mod.wizards {
+    newContentElement.wizardItems {
+        plugins {
+            elements {
+                sampleextension_jumbotron {
+                    iconIdentifier = content-text
+                    title = LLL:EXT:sampleextension/Resources/Private/Language/locallang.xlf:sampleextension_jumbotron_title
+                    description = LLL:EXT:sampleextension/Resources/Private/Language/locallang.xlf:sampleextension_jumbotron_description
+                    tt_content_defValues {
+                        CType = list
+                        list_type = sampleextension_jumbotron
+                    }
+                }
+            }
+        }
+    }
+}
